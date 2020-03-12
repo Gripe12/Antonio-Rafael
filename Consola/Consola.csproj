@@ -6,8 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleApp1\Ficha13.csproj" />
     <ProjectReference Include="..\Ficha 6\Ficha 6.csproj" />
     <ProjectReference Include="..\Ficha 7\Ficha 7.csproj" />
+    <ProjectReference Include="..\Ficha12\Ficha12.csproj" />
   </ItemGroup>
 
 </Project>
