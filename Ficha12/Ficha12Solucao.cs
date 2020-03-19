@@ -88,23 +88,30 @@ namespace Ficha12
         {
             Console.WriteLine("Introduz um número");
             int num1 = int.Parse(Console.ReadLine());
-            //bool isParse = true;
-
-            for(var i = 1; i <= num1; i++)
+            bool isPrime = false;
+            int a;
+            for(var i = 2; i <= num1; i++)
             {
 
-               for( var a = 2; a <= num1; a++)
+               for(a = 2; a < i; a++)
                {
 
-                    if (i % a != 0)
+                    if (i % a == 0)
                     {
-                        //isParse = false;
+                        isPrime = true;
                         break;
                     }
 
                }
-               Console.WriteLine(i);
-                //isParse = true;
+                if(!isPrime)
+                {
+                    Console.Write(i + " ");
+                } 
+                else
+                {
+                    isPrime = false;
+                }
+
             }
 
         }
@@ -131,21 +138,62 @@ namespace Ficha12
 
         public static void Exercicio6()
         {
-            Console.WriteLine("Pense num número de 1 a 100. É maior que 50?");
-            var a = Console.ReadLine();
+            int min = 1;
+            int max = 100;
+            bool fernandoMendes = false;
 
-            if (a == "S")
-            {
-                Console.WriteLine("É menor que 75?");
 
-            }
-            else if (a == "N")
+
+
+            while (!fernandoMendes)
             {
-                Console.WriteLine("É maior que 50?");
+                var avc = (int)Math.Floor((double)(min + max) / 2);
+                var intConf = max - min;
+                var keyOK = false;
+                if(intConf < 2)
+                {
+                    for(int i = min; i < max +1; i++)
+                    {
+                        Console.WriteLine($"É {i}");
+                        var key = Console.ReadKey().Key;
+                        if (key == ConsoleKey.Y || key == ConsoleKey.S)
+                        {
+                            fernandoMendes = true;
+                            break;
+                        }
+                    }
+                }
+
+                while (!keyOK)
+                {
+                Console.WriteLine($"O número é inferior a {avc}?");
+                
+                    switch (Console.ReadKey().Key) 
+                    {
+                        case ConsoleKey.Y:
+                        case ConsoleKey.S:
+                            keyOK = true;
+                            max = avc - 1;
+                            break;
+
+                        case ConsoleKey.N:
+                            keyOK = true;
+                            min = avc;
+                            break;
+
+                        default:
+                            break;
+
+                    }
+
+                }
             }
+
         }
 
         #endregion
+
     }
 }
+
 

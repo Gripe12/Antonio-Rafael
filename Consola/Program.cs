@@ -2,6 +2,7 @@
 using Ficha_7;
 using Ficha12;
 using Ficha13;
+using Ficha14;
 using System;
 
 namespace Consola
@@ -48,14 +49,19 @@ namespace Consola
             //Ficha12Solucao.Exercicio1();
             //Ficha12Solucao.Exercicio2();
             //Ficha12Solucao.Exercicio3();
-            Ficha12Solucao.Exercicio4();
+            //Ficha12Solucao.Exercicio4();
             //Ficha12Solucao.Exercicio5();
             //Ficha12Solucao.Exercicio6();
-
-
-
             //Ficha13Solucao.Calculadora();
-           
+
+            //Ficha14Solucao.Exercicio1();
+            //Ficha14Solucao.Exercicio2();
+            //Ficha14Solucao.Exercicio4();
+            //Ficha14Solucao.Exercicio5();
+            //Ficha14Solucao.Exercicio6();
+
+       
+
         }
     }
 }
