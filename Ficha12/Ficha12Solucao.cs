@@ -82,7 +82,7 @@ namespace Ficha12
 
         #endregion
 
-        #region Exercicio4 [x]
+        #region Exercicio4 
 
         public static void Exercicio4()
         {
@@ -136,7 +136,188 @@ namespace Ficha12
 
         #region Exercicio6
 
-        public static void Exercicio6()
+        public static void Exercicio6 ()
+        {
+            Console.WriteLine("Quantos itens");
+            int itens = int.Parse(Console.ReadLine());
+
+            for (int i = itens; i >= 1; i--)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine("Um para mim");
+                }
+                else
+                {
+                    Console.WriteLine("Um para ti");
+                }
+            }
+        }
+
+        #endregion
+
+        #region Exercicio 7
+
+        public static void Exercicio7 ()
+        {
+            Console.WriteLine("Ano?");
+            int ano = int.Parse(Console.ReadLine());
+
+            if (ano % 4 == 0)
+            {
+                Console.WriteLine("O ano é bisexto");
+            }else
+            {
+                Console.WriteLine("O ano não é bisexto");
+            }
+        }
+
+        #endregion
+
+        #region Exercicio8
+
+        public static void Exercicio8()
+        {
+            for(int a = 99; a > 0; a--)
+            {
+                Console.WriteLine($"{a} bottles of beer on the wall, {a} bottles of beer. Take one down and pass it around, {a - 1} bottles of beer on the wall.");
+            }
+        }
+
+        #endregion
+
+        #region Exercicio9
+
+        public static void Exercicio9()
+        {
+            Console.WriteLine("Qual a dimensão do lado esquerdo do triângulo?");
+            int ab = int.Parse(Console.ReadLine());
+            Console.WriteLine("Qual a dimensão do lado direito do triângulo?");
+            int ca = int.Parse(Console.ReadLine());
+            Console.WriteLine("Quais da base do triângulo?");
+            int bc = int.Parse(Console.ReadLine());
+           
+
+            if (ab == bc && bc == ca && ab == ca)
+            {
+                Console.WriteLine("O triângulo é equilátero");
+            }
+            else if (ab == ca && ab != bc && ca != bc)
+            {
+                Console.WriteLine("O triângulo é isósceles");
+            }else
+            {
+                Console.WriteLine("O triângulo é escaleno");
+            }
+        }
+
+        #endregion
+
+        #region Exercicio10
+
+        public static void Exercicio10()
+        {
+            Console.WriteLine("Qual o valor inicial?");
+            int valInic = int.Parse(Console.ReadLine());
+            Console.WriteLine("Qual o valor total?");
+            int valTotal = int.Parse(Console.ReadLine());
+
+            if ( valInic < valTotal)
+            {
+                Console.WriteLine("Lucro!$$$$$$");
+            }
+            else 
+            {
+                Console.WriteLine("Prejuízo :,(");
+            }
+         
+        }
+
+        #endregion
+
+        #region Exercicio11
+
+        public static void Exercicio11()
+        {
+            Random rnd = new Random();
+            int month = rnd.Next(1, 13);
+
+            if (month == 1)
+            {
+                Console.WriteLine("Janeiro" + '\n' + "31 dias");
+            } 
+            else if (month == 2)
+            {
+                Console.WriteLine("Fevereiro" + '\n' + "28 ou 29 dias");
+
+            }
+            else if (month == 3)
+            {
+                Console.WriteLine("Março" + '\n' + "31 dias");
+
+            }
+            else if (month == 4)
+            {
+                Console.WriteLine("Abril" + '\n' + "30 dias");
+
+            }
+            else if (month == 5)
+            {
+                Console.WriteLine("Maio" + '\n' + "31 dias");
+
+            }
+            else if (month == 6)
+            {
+                Console.WriteLine("Junho" + '\n' + "30 dias");
+
+            }
+            else if (month == 7)
+            {
+                Console.WriteLine("Julho" + '\n' + "31 dias");
+
+            }
+            else if (month == 8)
+            {
+                Console.WriteLine("Agosto" + '\n' + "31 dias");
+
+            }
+            else if (month == 9)
+            {
+                Console.WriteLine("Setembro" + '\n' + "30 dias");
+
+            }
+            else if (month == 10)
+            {
+                Console.WriteLine("Outubro" + '\n' + "31 dias");
+
+            }
+            else if (month == 11)
+            {
+                Console.WriteLine("Novembro" + '\n' + "30 dias");
+
+            }
+            else if (month == 12)
+            {
+                Console.WriteLine("Dezembro" + '\n' + "31 dias");
+
+            }
+
+        }
+
+        #endregion
+
+        #region Exercicio12
+
+        public static void Exercicio12()
+        {
+
+        }
+
+        #endregion
+
+        #region Exercicio16
+
+        public static void Exercicio16()
         {
             int min = 1;
             int max = 100;
@@ -150,15 +331,16 @@ namespace Ficha12
                 var avc = (int)Math.Floor((double)(min + max) / 2);
                 var intConf = max - min;
                 var keyOK = false;
-                if(intConf < 2)
+                if (intConf < 2)
                 {
-                    for(int i = min; i < max +1; i++)
+                    for (int i = min; i < max + 1; i++)
                     {
                         Console.WriteLine($"É {i}");
                         var key = Console.ReadKey().Key;
                         if (key == ConsoleKey.Y || key == ConsoleKey.S)
                         {
                             fernandoMendes = true;
+                            keyOK = true;
                             break;
                         }
                     }
@@ -166,9 +348,9 @@ namespace Ficha12
 
                 while (!keyOK)
                 {
-                Console.WriteLine($"O número é inferior a {avc}?");
-                
-                    switch (Console.ReadKey().Key) 
+                    Console.WriteLine($"O número é inferior a {avc}?");
+
+                    switch (Console.ReadKey().Key)
                     {
                         case ConsoleKey.Y:
                         case ConsoleKey.S:
