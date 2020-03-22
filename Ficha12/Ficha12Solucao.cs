@@ -310,10 +310,135 @@ namespace Ficha12
 
         public static void Exercicio12()
         {
+            Console.WriteLine("Qual a dimensão do triângulo?");
+            int n = int.Parse(Console.ReadLine());
+            int i = 0;
+
+            while (n > 0)
+            {
+                int nov = n * 2 - 1;
+                n--;
+
+                int b = 0;
+                while (b != i)
+                {
+                    Console.Write(" ");
+                    b++;
+                }
+
+                
+
+                int a = 0;
+                while (a != nov)
+                {
+
+                    Console.Write("*");
+                    a++;
+
+                }
+
+                int c = 0;
+                while (c != i)
+                {
+                    Console.Write(" ");
+                    c++;
+                }
+
+                i += 1;
+
+                Console.WriteLine();
+            }
+        }
+
+        #endregion
+
+        #region Exercicio13
+
+        public static void Exercicio13()
+        {
+            Console.WriteLine("Qual a região?");
+            var regiao = Console.ReadLine();
+            Console.WriteLine("Quatas unidades?");
+            double uni = double.Parse(Console.ReadLine());
+
+            double valReg = 0;
+            
+
+            switch (regiao)
+            {
+                case ("A"):
+                    valReg = 2;
+                    Console.WriteLine(valReg * uni + "€");
+                    break;
+                case ("B"):
+                    valReg = 1.20;
+                    Console.WriteLine(valReg * uni + "€");
+                    break;
+                case ("C"):
+                    valReg = 1;
+                    Console.WriteLine(valReg * uni + "€");
+                    break;
+                case ("D"):
+                    valReg = 0.75;
+                    Console.WriteLine(valReg * uni + "€");
+                    break;
+                default:
+                    Console.WriteLine("Região inexistente");
+                    break;
+
+            }
 
         }
 
         #endregion
+
+        #region Exercicio14
+
+        public static void Exercicio14()
+        {
+            int num1 = 0;
+            int num2 = 1;
+
+            Console.WriteLine("Dá-me um número");
+            int lim = int.Parse(Console.ReadLine());
+
+            for (var i = 0; i <= lim; i++)
+            {
+                int total = num1 + num2;
+                num1 = num2;
+                num2 = total;
+
+
+                Console.Write(total + " ");
+
+            }
+        
+        }
+
+        #endregion
+
+        #region Exercicio15
+
+        public static void Exercicio15()
+        {
+            Console.WriteLine("Dá-me um número");
+             int num = int.Parse(Console.ReadLine());
+
+            if ()
+            {
+                Console.WriteLine("É Fibonicce!");
+            }
+            else
+            {
+                Console.WriteLine("É Fibonot!");
+            }
+
+        }
+
+        #endregion
+
+
+
 
         #region Exercicio16
 
