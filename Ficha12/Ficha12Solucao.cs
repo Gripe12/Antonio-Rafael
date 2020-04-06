@@ -424,7 +424,7 @@ namespace Ficha12
             Console.WriteLine("Dá-me um número");
              int num = int.Parse(Console.ReadLine());
 
-            if ()
+            if (num == (num-1) + (num -2))
             {
                 Console.WriteLine("É Fibonicce!");
             }
