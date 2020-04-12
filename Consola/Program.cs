@@ -65,6 +65,9 @@ namespace Consola
 
 
             //Ficha13Solucao.Calculadora();
+            //Ficha13Solucao.Desenho();
+            Ficha13Solucao.JogoDoGalo();
+
 
             //Ficha14Solucao.Exercicio1();
             //Ficha14Solucao.Exercicio2();
@@ -77,7 +80,7 @@ namespace Consola
             //Ficha15Solucao.Exercicio4();
             //Ficha15Solucao.Exercicio5();
             //Ficha15Solucao.Exercicio6();
-
+            //Ficha15Solucao.Exercicio7();
             //Ficha15Solucao.Exercicio8();
             //Ficha15Solucao.Exercicio9();
             //Ficha15Solucao.Exercicio10();

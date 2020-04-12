@@ -149,11 +149,23 @@ namespace Ficha15
         }
         #endregion
 
-        #region 7 [x]
+        #region 7
 
         public static void Exercicio7()
         {
+            var array = new[] { 15, 5, 32, 68, 17 };
+            var a = 1;
 
+            for ( var i = 0; i < array.Length; i++)
+            {
+                for(a = 1; a < array.Length; a++)
+                {
+                    if (array[i] != array[a])
+                    {
+                        Console.WriteLine(array[i]);
+                    }
+                }
+            }
         }
 
         #endregion
@@ -260,25 +272,48 @@ namespace Ficha15
 
         public static void Exercicio11()
         {
-            var array = new[] { 15, 5, 32, 68, 17 };
+            var array = new [] { 15, 5, 32, 68, 17 };
+            var impares = new int[3];
+            var pares = new int[2];
+            var c = 0;
+            var d = 0;
 
 
-            for(var i = 0; i < array.Length; i++)
+
+            for (var i = 0; i < array.Length; i++)
             {
-                if(array[i] % 2 == 1)
+                if (array[i] % 2 == 1)
+
                 {
-                    Console.Write(array[i] + " ");
+                    impares[c] = array[i]; 
+                    c++;
                 }
             }
 
-            Console.WriteLine();
 
             for( var a= 0; a < array.Length; a++)
             {
                 if( array[a] % 2 == 0)
                 {
-                    Console.Write(array[a] + " ");
+                    pares[d] = array[a]; 
+                    d++;
                 }
+            }
+            for (var e = 0; e < impares.Length; e++)
+            {
+                if(impares[e] == 0)
+                {
+                   
+                }
+                Console.Write(impares[e] + " ");
+            }
+
+            Console.WriteLine();
+
+
+            for (var f = 0; f < impares.Length; f++)
+            {
+                Console.Write(pares[f] + " ");
             }
         }
 
